@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+
+\title{The Frohmanian Symplectic Tether as the Geometric Origin of Robust Scaling and Sharper Proximity Gaps\\ Discrete Proxy, Empirical Results, and Research Program}
+\author{Benjamin Stanley Frohman\\ Independent Researcher\\ ORCID: 0009-0006-7068-3718}
+\date{November 2026 (materials originating June--July 2026)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present empirical and formal evidence that the quadratic geometric feedback mechanism at the heart of the Frohmanian Symplectic Tether---the canonical minimal extension of Arnold's Lie--Poisson bracket that yields global regularity for the metriplectic regularization of the 3D incompressible Navier--Stokes equations---discretizes to a powerful regularizer for representation geometry. The tether proxy (penalizing norm variance and driving squared overlaps to the equiangular tight frame ideal of $1/m$) produces a $1.77\times$ average reduction in reconstruction loss and a $1.93\times$ improvement in robustness under strong superposition. We outline a Lean 4 formalization path and argue that this mechanism supplies a first-principles geometric reason for robust $1/m$ scaling and offers a novel route toward bounding precise $\delta^*$ values in the Ethereum Foundation Proximity Prize challenges on Reed--Solomon proximity gaps and mutual correlated agreement.
+\end{abstract}
+
+\section{Continuous Mechanism (Summary and Citations)}
+The continuous derivation of the unique $\kappa=1$ matching that produces the Riccati inequality $dM_\varepsilon/dt \le C - M_\varepsilon^2$ is given in the June 2026 manuscripts and Lean formalization archived at Zenodo 10.5281/zenodo.23629499 (concept 10.5281/zenodo.23629498) and in BenFrohman/NS\_Millennium\_Proof. The spatial bridge formalization of the Deng--Hou--Yu identity (Zenodo 10.5281/zenodo.24097853, November 9, 2026) is a complementary continuous kinematic tool and does not overlap with the discrete constructions here.
+
+\section{Discrete Tether Proxy}
+For a feature matrix $W\in\mathbb{R}^{n\times m}$ the tether proxy is
+\[
+\mathcal{L}_{\rm tether}(W,m,\lambda)=\lambda\Bigl(\operatorname{Var}(\|W_i\|)+3\operatorname{Var}(\langle\hat W_i,\hat W_j\rangle^2)+8\bigl(\mathbb{E}[\langle\hat W_i,\hat W_j\rangle^2]-1/m\bigr)^2\Bigr).
+\]
+This drives the Gram matrix toward an equiangular tight frame.
+
+\section{Empirical Results}
+In a 36-configuration sweep ($n=512$, $m\in\{32,64,96\}$, etc.) under strong superposition the tether proxy yields $1.77\times$ average loss reduction and $1.93\times$ robustness improvement. These are empirical observations, not theorems about Reed--Solomon codes.
+
+\section{Lean Formalization Path and Status}
+The accompanying DiscreteTetherProxy.lean provides the skeleton. Theorems on controlled effective dimension and robust $1/m$ scaling from small tether functional are stated; full kernel-closed proofs of sharper proximity gaps for plain RS codes remain open research (consistent with the status of the Proximity Prize after the late-2025 disproofs of pure up-to-capacity conjectures).
+
+\section{Research Program for the Proximity Prize}
+The geometric regularizer suggests a path to improved quantitative bounds on $\varepsilon_{\rm mca}$ and list size in the intermediate zone above the Johnson radius. This note does not claim a resolution of the grand challenges.
+
+\section{Proved / Empirical / Conjectural Ledger}
+- \textbf{Proved (continuous):} $\kappa=1$ coefficient matching and Riccati bound for the regularized system (see cited Zenodo records).
+- \textbf{Empirical:} $1.77\times$ / $1.93\times$ factors in the linear representation model.
+- \textbf{Conjectural / open:} improvement of concrete $\delta^*$ for plain smooth-domain Reed--Solomon codes of rates $1/2,1/4,\dots$.
+
+Data and code for the experiments reside in the author's Drive and will be attached to the Zenodo deposit of this note.
+\end{document}
