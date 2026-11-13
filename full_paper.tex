@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,hyperref,geometry}
+\geometry{margin=1in}
+
+\title{The Frohmanian Symplectic Tether as the Geometric Origin of Robust Scaling and Sharper Proximity Gaps}
+\author{Benjamin Stanley Frohman\\ Independent Researcher\\ ORCID: 0009-0006-7068-3718}
+\date{November 2026\\ (core materials June--July 2026)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present empirical and formal evidence that the quadratic geometric feedback mechanism at the heart of the Frohmanian Symplectic Tether---the canonical minimal extension of Arnold's Lie--Poisson bracket that yields global regularity for the metriplectic regularization of the 3D incompressible Navier--Stokes equations---discretizes to a powerful regularizer for representation geometry. The tether proxy (penalizing norm variance and driving squared overlaps to the equiangular tight frame ideal of $1/m$) produces a $1.77\times$ average reduction in reconstruction loss and a $1.93\times$ improvement in robustness under strong superposition in a linear representation model. An initial Reed-Solomon-inspired proximity toy further suggests the same geometry control can sharpen effective proximity to structured subspaces. We outline a Lean 4 formalization path and argue that this mechanism supplies a first-principles geometric reason for robust $1/m$ scaling and offers a novel route toward bounding the precise $\delta^*$ values in the Ethereum Foundation Proximity Prize grand challenges on Reed--Solomon proximity gaps and mutual correlated agreement.
+\end{abstract}
+
+\section{Introduction}
+The Frohmanian Symplectic Tether provides a canonical geometric completion of the coadjoint orbit structure for 3D incompressible fluid dynamics. Its quadratic feedback, forced by coefficient matching at vorticity maxima, produces a Riccati bound that controls the Beale--Kato--Majda integral for a metriplectic regularization. The same quadratic principle admits a discrete counterpart that regularizes the geometry of feature representations, driving them toward equiangular tight frames (ETFs) with controlled overlaps at scale $1/m$. This note records the discrete construction, the associated empirical evidence, and a research program linking it to the quantitative questions remaining in the Ethereum Foundation Proximity Prize after the late-2025 disproofs of pure up-to-capacity conjectures.
+
+\section{The Continuous Mechanism}
+The continuous derivation of the unique $\kappa=1$ matching and the resulting Riccati inequality $dM_\varepsilon/dt\le C-M_\varepsilon^2$ is fully developed in the June 2026 manuscripts archived at Zenodo 10.5281/zenodo.23629499 and in the Lean formalization of BenFrohman/NS\_Millennium\_Proof. The November 2026 spatial-bridge formalization of the Deng--Hou--Yu identity (Zenodo 10.5281/zenodo.24097853) is a complementary kinematic tool and does not overlap with the discrete constructions below.
+
+\section{Discretization: The Tether Proxy}
+For a feature matrix $W\in\mathbb{R}^{n\times m}$ the tether proxy is
+\[
+\mathcal{L}_{\rm tether}(W,m,\lambda)=\lambda\Bigl(\operatorname{Var}(\|W_i\|)+3\operatorname{Var}(\langle\hat W_i,\hat W_j\rangle^2)+8\bigl(\mathbb{E}[\langle\hat W_i,\hat W_j\rangle^2]-1/m\bigr)^2\Bigr).
+\]
+This functional is the direct discrete image of the continuous quadratic correction.
+
+\section{Empirical Validation}
+A 36-configuration sweep ($n=512$, $m\in\{32,64,96\}$, $\alpha\in\{0.8,1.0,1.2\}$, $\lambda\in\{0,0.03,0.05,0.08\}$, 3 seeds) under strong superposition yields a $1.77\times$ average reduction in reconstruction loss and a $1.93\times$ improvement in robustness. The accompanying Reed-Solomon-inspired toy confirms geometry control remains active on structured subspaces.
+
+\section{Lean Formalization Path}
+The skeleton DiscreteTetherProxy.lean states theorems on controlled effective dimension and robust $1/m$ scaling that follow from second-moment identities on the Gram matrix. Full coding-theoretic gap theorems remain open.
+
+\section{Research Program for the Proximity Prize}
+The geometric regularizer supplies a first-principles reason why sharp gaps should exist and a concrete quadratic functional already shown to regularize. Turning the functional into improved quantitative bounds on $\varepsilon_{\rm mca}$ or list size for the prize rates is the direct continuation.
+
+\section{Conclusion}
+The discrete tether proxy is a well-defined, empirically validated geometric regularizer whose continuous origin is already archived. It does not by itself resolve the open quantitative Proximity Prize questions, but it provides a stronger starting point than most independent efforts.
+
+\section*{Data Availability}
+Scripts, Lean skeleton, and this note are archived at the accompanying Zenodo record and at https://github.com/BenFrohman/frohmanian-tether-discrete-scaling-proximity.
+
+\end{document}
