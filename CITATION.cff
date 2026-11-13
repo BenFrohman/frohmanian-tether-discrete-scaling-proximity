@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "The Frohmanian Symplectic Tether as the Geometric Origin of Robust Scaling and Sharper Proximity Gaps: Discrete Proxy, Empirical Results, and Research Program"
+authors:
+  - family-names: Frohman
+    given-names: Benjamin Stanley
+    orcid: https://orcid.org/0009-0006-7068-3718
+date-released: 2026-11-12
+license: Apache-2.0
+repository-code: https://github.com/BenFrohman/frohmanian-tether-discrete-scaling-proximity
