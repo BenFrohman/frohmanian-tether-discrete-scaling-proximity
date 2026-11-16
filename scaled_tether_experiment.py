@@ -5,7 +5,7 @@ Scaled Empirical Test of Geometric Tether Proxy for Robust Superposition Scaling
 Stemming from the Frohmanian Symplectic Tether (quadratic metric correction
 yielding Riccati control on vorticity in 3D NS).
 
-Author: Benjamin Stanley Frohman (@Investor0x)
+Author: Benjamin Stanley Frohman (@Frohmanian)
 """
 
 import torch
