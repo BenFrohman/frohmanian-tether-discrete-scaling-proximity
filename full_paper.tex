@@ -1,3 +1,5 @@
+% Copyright (c) 2026 Benjamin Stanley Frohman
+% Licensed under the Apache License 2.0
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
@@ -19,6 +21,8 @@
 
 \begin{document}
 \maketitle
+\noindent{\small Copyright (c) 2026 Benjamin Stanley Frohman. Licensed under the Apache License 2.0.}\par
+
 
 \begin{abstract}
 We present the discretization of the quadratic geometric feedback at the heart of the Frohmanian Symplectic Tether---the canonical minimal extension of Arnold's Lie--Poisson bracket that produces the Riccati control for the metriplectic regularization of the 3D incompressible Navier--Stokes equations---as a regularizer for finite-dimensional representation geometry. The discrete tether proxy penalizes norm variance and drives squared pairwise overlaps toward the equiangular tight frame ideal of $1/m$. Scaled experiments under strong superposition report a $1.77\times$ average reduction in reconstruction loss and a $1.93\times$ improvement in robustness across feature-frequency distributions. We supply a Lean~4 module that kernel-checks the algebraic second-moment identities underlying controlled effective dimension (participation ratio) under a small tether functional, using only standard axioms and zero \texttt{sorry} for the finite-dimensional case. An initial Reed-Solomon-inspired proximity toy indicates that the same geometry control can sharpen effective proximity to structured subspaces. The note is complementary to the continuous formalization (Zenodo 10.5281/zenodo.23629499 and subsequent records; 360 theorems, zero \texttt{sorry}, only standard axioms in BenFrohman/NS\_Millennium\_Proof) and does not overlap with the November~2026 spatial-bridge paper (Zenodo 10.5281/zenodo.24097853). It does not claim a resolution of the Ethereum Foundation Proximity Prize quantitative challenges.
